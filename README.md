@@ -13,6 +13,10 @@ It is responsible for:
     * watcher.proc.killed: Incremented when watcher sends the SIGKILL to the process.
     * watcher.reqcpu: Metric demonstrating an average of how many CPU jiffies per request process consumes.
 
+Note: process-watcher depends on monitr to provide status of worker process. For every worker, monitr needs to be
+started. For more details on monitr, please refer - https://github.com/yahoo/monitr/blob/master/README.md
+and for code example refer to https://github.com/yahoo/monitr/blob/master/examples/monitor_me.js.
+
 install
 -------
 With npm do:
