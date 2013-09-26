@@ -63,3 +63,13 @@ var dgpath = '/tmp/watcher_test_dgram',
 //Instantiate watcher
 var watcher_instance = new watcher.Watcher({ metric : watcher_metric, config : watcher_config });
 ```
+
+Build Status
+------------
+
+[![Build Status](https://api.travis-ci.org/yahoo/process-watcher.png?branch=master)](http://travis-ci.org/yahoo/process-watcher)
+
+Node Badge
+----------
+
+[![NPM](https://nodei.co/npm/process-watcher.png)](https://nodei.co/npm/process-watcher/)

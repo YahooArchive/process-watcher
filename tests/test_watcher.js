@@ -106,10 +106,10 @@ suite.add(new YUITest.TestCase({
 	};
        
 	testee.checkStatus(sb);
-	Assert.isTrue(sb["watcher.proc.graceful"]);
-    
-	testee.checkStatus(sb);
-	Assert.isTrue(sb["watcher.proc.killed"]);
+        Assert.isTrue(sb["watcher.proc.graceful"]);
+
+        testee.checkStatus(sb);
+        Assert.isTrue(sb["watcher.proc.killed"]);
     },
     
     'Test inactivity' :function(f) {
@@ -123,23 +123,23 @@ suite.add(new YUITest.TestCase({
             }
         };
        
-	lastKill = '';
-	lastKillPID = 0;
-	testee.checkInactivity(testee._metric);     
-        
-	// Verify proc is killed      
-	Assert.areEqual(lastKill, 'SIGKILL');
-	Assert.areEqual(lastKillPID, pid);
+        lastKill = '';
+        lastKillPID = 0;
+        testee.checkInactivity(testee._metric);
+
+        // Verify proc is killed
+        Assert.areEqual(lastKill, 'SIGKILL');
+        Assert.areEqual(lastKillPID, pid);
     },
 	
     'Clean up - should run as the last' : function() {
-	var ex = null;
-	try {
-            testee.closeStatusService();
-	} catch (e) {
-	    ex = e;
-	}
-	Assert.areEqual(ex, null);
-	process.emit('exit');
+        var ex = null;
+        try {
+                testee.closeStatusService();
+        } catch (e) {
+            ex = e;
+        }
+        Assert.areEqual(ex, null);
+        process.emit('exit');
     }
 }));
