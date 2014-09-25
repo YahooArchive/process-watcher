@@ -16,7 +16,7 @@
     },
     "main": "./lib/index.js",
     "scripts": {
-        "pretest": "jshint --config ./node_modules/yui-lint/jshint.json ./lib/",
+        "pretest": "jshint --config ./node_modules/yui-lint/jshint.json ./lib/ ./tests/",
         "test": "istanbul cover --print=both --yui ytestrunner -- --include ./tests/options.js --include ./tests/builder.js --include ./tests/parser.js --include ./tests/parser_coffee.js --include ./tests/test_watcher.js"
     },
     "bugs": { "url" : "http://github.com/yahoo/process-watcher/issues" },
