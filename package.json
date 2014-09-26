@@ -2,7 +2,7 @@
     "name": "process-watcher",
     "description": "Monitors nodejs processes for endless loops and other abnormal behaviours and kills it.",
     "author": "Abhinav Raj <abhinavr@yahoo-inc.com>",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "dependencies": {
         "unix-dgram": ">=0.0.3",
         "monitr": "*",
